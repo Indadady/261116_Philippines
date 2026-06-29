@@ -1,13 +1,13 @@
 # 2026 통리초등학교 필리핀 어학연수 — Smart Guidebook
 
 **어학원:** 바기오 JIC Green Valley Premium Campus  
-**기간:** 2026.11.14 (토) ~ 11.28 (토) · 14박 15일  
+**기간:** 2026.11.16 (월) ~ 11.30 (월) · 14박 15일  
 **인원:** 학생 7명 + 교사 2명  
 **항공:** 아시아나항공 OZ707 / OZ708 (인천 ↔ 클락)
 
 ## 배포 URL
 
-https://indadady.github.io/261114_Philippines/
+https://indadady.github.io/261116_Philippines/
 
 ## 담당자
 

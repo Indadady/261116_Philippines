@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <!-- 🚨 Google Analytics (GA4) - Tourmaker 통합 관리 -->
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-JLH9GD9SVR"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -9,102 +9,65 @@
       gtag('js', new Date());
       gtag('config', 'G-JLH9GD9SVR');
     </script>
-    <!-- // Google Analytics 끝 -->
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- 🌟 카카오톡/SNS 공유 시 보여질 썸네일 및 정보 설정 (Open Graph) -->
+
     <meta property="og:type" content="website">
-    <meta property="og:title" content="2026 통리초등학교 글로벌 영어 캠프 제안서 (바기오 최적화안)">
-    <meta property="og:description" content="14박 15일 전체 로드맵 및 어학원 상세 정보 (바기오 CNS vs 바기오 JIC) | 투어메이커 T-safe24 안전망 적용">
-    <!-- 썸네일 이미지: 웹페이지 내 사용된 캠퍼스 이미지로 설정 -->
-    <meta property="og:image" content="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <!-- // SNS 설정 끝 -->
+    <meta property="og:title" content="2026 통리초등학교 글로벌 영어 캠프 — 바기오 JIC Premium Campus">
+    <meta property="og:description" content="14박 15일 바기오 JIC Green Valley 프리미엄 캠퍼스 어학연수 안내 초안 | TEP ESL · Active Learning | 투어메이커 T-safe24">
+    <meta property="og:image" content="https://indadady.github.io/261114_Philippines/assets/images/og-thumb.jpg">
+    <meta property="og:image:width" content="1920">
+    <meta property="og:image:height" content="788">
+    <meta property="og:image:alt" content="바기오 JIC Green Valley Premium Campus 전경">
 
     <title>2026 통리초등학교 글로벌 영어 캠프: Smart Guidebook</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
     <style>
         body { font-family: 'Noto Sans KR', sans-serif; background-color: #f8fafc; color: #1e293b; }
-        
-        /* Hero Background */
-        .hero-bg-main { 
-            background: linear-gradient(rgba(15, 23, 42, 0.6), rgba(30, 58, 138, 0.7)), url('https://tse3.mm.bing.net/th/id/OIP.KrAXiRdJCSAOkVHPLYjD9QHaEc?w=474&h=474&c=7&p=0');
+        :root { --tm: #004098; --tm-dark: #002d6b; }
+
+        .hero-bg-main {
+            background: linear-gradient(rgba(15, 23, 42, 0.55), rgba(0, 64, 152, 0.75)), url('assets/images/hero.jpg');
             background-size: cover;
             background-position: center;
-        } 
-        
-        /* Interactive Elements */
+        }
+
         .nav-link { transition: all 0.3s; }
         .nav-link:hover, .nav-link.active { color: #0ea5e9; border-bottom-color: #0ea5e9; }
-        
-        .option-btn { transition: all 0.3s; }
-        .option-btn.active { transform: scale(1.02); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); }
-        
-        .academy-tab { transition: all 0.3s; }
-        .academy-tab.active { background-color: #ffffff; border-bottom: 2px solid #0ea5e9; color: #0ea5e9; font-weight: 700; }
-        
-        /* Table Styling for Weekly Schedule */
+
         .schedule-table th { white-space: nowrap; }
         .schedule-table td { vertical-align: middle; }
         .schedule-table tr:hover { background-color: rgba(241, 245, 249, 0.5); }
-        
+
         html { scroll-behavior: smooth; }
         .hover-zoom { transition: transform 0.3s ease; }
         .hover-zoom:hover { transform: scale(1.02); }
 
-        /* Play Button Overlay */
-        .play-overlay {
-            background: rgba(0, 0, 0, 0.4);
-            transition: all 0.3s;
-        }
-        .group:hover .play-overlay {
-            background: rgba(0, 0, 0, 0.2);
-        }
-        .play-icon {
-            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-        .group:hover .play-icon {
-            transform: scale(1.2);
-        }
+        .play-overlay { background: rgba(0, 0, 0, 0.4); transition: all 0.3s; }
+        .group:hover .play-overlay { background: rgba(0, 0, 0, 0.2); }
+        .play-icon { transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        .group:hover .play-icon { transform: scale(1.2); }
 
-        /* Note Pad Style */
         .notepad {
-            background-color: #fef9c3; /* Yellow-100 */
+            background-color: #fef9c3;
             background-image: linear-gradient(#e5e7eb 1px, transparent 1px);
             background-size: 100% 2rem;
             line-height: 2rem;
-            font-family: 'Noto Sans KR', sans-serif;
-            border-left: 4px solid #0ea5e9; /* Sky blue accent */
+            border-left: 4px solid #0ea5e9;
             box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
         }
-        .notepad:focus {
-            outline: none;
-            background-color: #fef08a; /* Yellow-200 on focus */
-        }
-        
-        /* Custom Alert Box */
+        .notepad:focus { outline: none; background-color: #fef08a; }
+
         .custom-alert {
             background-image: linear-gradient(135deg, #fff 0%, #f0f9ff 100%);
             border-left: 5px solid #0ea5e9;
         }
 
-        /* Comparison Table Logic */
-        .vs-badge {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 10;
-        }
-
-        /* Roadmap Styling */
         .roadmap-step { position: relative; }
         .roadmap-step:not(:last-child)::after {
             content: '';
@@ -126,50 +89,44 @@
                 transform: translate(0, 50%);
             }
         }
+
+        .highlight-card { border-top: 4px solid var(--tm); }
     </style>
 </head>
 <body class="antialiased bg-slate-50">
 
-    <!-- Header / Navigation -->
     <header class="bg-white/95 backdrop-blur-md shadow-sm sticky top-0 z-50">
         <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
-                <!-- Tourmaker Logo & D-Day -->
                 <div class="flex-shrink-0 flex items-center gap-3">
                     <a href="https://tourmaker.kr" target="_blank">
                         <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgHfgIX70O5k6Anuo0UgALIdaG9jSga9auHu3uyz0uEirylGPAJnjN_qQbvEGMUvPqUQf_g9FMNUHRxlDcUBf4vZ3Mpy4TnA9WxbmzWYK11gt2zuy_Irl4wctNFjcjLyPo0GPXV792o_J7L9guRMuDfeC1gy7USwywjYbECZgzcsHybuGRRAXAnO1eNmP8/s320/logo.png" alt="Tourmaker Logo" class="h-8 w-auto">
                     </a>
-                    <!-- D-Day Counter Badge -->
-                    <div id="d-day-badge" class="bg-sky-600 text-white text-xs font-bold px-2 py-1 rounded-full shadow-md animate-pulse">
-                        Calculating...
-                    </div>
+                    <div id="d-day-badge" class="bg-sky-600 text-white text-xs font-bold px-2 py-1 rounded-full shadow-md animate-pulse">Calculating...</div>
                 </div>
-                
-                <!-- Mobile Menu Button (Hamburger) -->
                 <div class="md:hidden">
                     <a href="#safety" class="text-red-600 font-bold text-sm mr-2"><i class="fa-solid fa-shield-halved"></i> 안전망</a>
                 </div>
-
-                <!-- Desktop Nav -->
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-4 text-sm font-medium">
-                        <a href="#comparison"  class="nav-link px-3 py-2 border-b-2 border-transparent text-red-600 font-bold">★비교 분석</a>
-                        <a href="#overview"    class="nav-link px-3 py-2 border-b-2 border-transparent">전체일정</a>
-                        <a href="#academies"   class="nav-link px-3 py-2 border-b-2 border-transparent">어학원소개</a>
-                        <a href="#curriculum"  class="nav-link px-3 py-2 border-b-2 border-transparent">상세시간표</a>
-                        <a href="#video"       class="nav-link px-3 py-2 border-b-2 border-transparent">현지영상</a>
-                        <a href="#safety"      class="nav-link px-3 py-2 border-b-2 border-transparent text-red-600 font-bold"><i class="fa-solid fa-shield-halved"></i> 안전/비상망</a>
-                        <a href="#mynote"      class="nav-link px-3 py-2 border-b-2 border-transparent text-yellow-600 font-bold"><i class="fa-solid fa-pen-to-square"></i> 노트</a>
+                        <a href="#highlights" class="nav-link px-3 py-2 border-b-2 border-transparent text-blue-700 font-bold">JIC 하이라이트</a>
+                        <a href="#overview" class="nav-link px-3 py-2 border-b-2 border-transparent">전체일정</a>
+                        <a href="#academy" class="nav-link px-3 py-2 border-b-2 border-transparent">어학원소개</a>
+                        <a href="#facilities" class="nav-link px-3 py-2 border-b-2 border-transparent">캠퍼스</a>
+                        <a href="#curriculum" class="nav-link px-3 py-2 border-b-2 border-transparent">상세시간표</a>
+                        <a href="#video" class="nav-link px-3 py-2 border-b-2 border-transparent">현지영상</a>
+                        <a href="#safety" class="nav-link px-3 py-2 border-b-2 border-transparent text-red-600 font-bold"><i class="fa-solid fa-shield-halved"></i> 안전/비상망</a>
+                        <a href="#mynote" class="nav-link px-3 py-2 border-b-2 border-transparent text-yellow-600 font-bold"><i class="fa-solid fa-pen-to-square"></i> 노트</a>
                     </div>
                 </div>
             </div>
         </nav>
-        <!-- Mobile Secondary Nav -->
         <div class="md:hidden overflow-x-auto whitespace-nowrap bg-slate-50 border-b border-slate-200">
             <div class="flex px-4 py-2 space-x-4 text-xs font-medium text-slate-600">
-                <a href="#comparison" class="block text-red-600 font-bold">★비교</a>
-                <a href="#overview" class="block">전체일정</a>
-                <a href="#academies" class="block">어학원</a>
+                <a href="#highlights" class="block text-blue-700 font-bold">JIC</a>
+                <a href="#overview" class="block">일정</a>
+                <a href="#academy" class="block">어학원</a>
+                <a href="#facilities" class="block">캠퍼스</a>
                 <a href="#curriculum" class="block">시간표</a>
                 <a href="#video" class="block">영상</a>
                 <a href="#safety" class="block text-red-600 font-bold">★안전망</a>
@@ -179,480 +136,365 @@
     </header>
 
     <main>
-        <!-- Hero Section -->
+        <!-- Hero -->
         <section id="home" class="hero-bg-main text-white text-center flex items-center justify-center min-h-[80vh] relative">
             <div class="container mx-auto px-4 z-10 flex flex-col items-center">
-                <!-- Tongri Elementary School Logo -->
                 <div class="bg-white p-3 rounded-xl shadow-xl mb-6 transform hover:scale-105 transition-transform duration-300 border border-slate-100">
-                    <img src="https://blogger.googleusercontent.com/img/a/AVvXsEh08bHS4da9YBugh4FX9Li0Of7ihbcIKFVY6MfTJvvBMpy8jKmLFFvoTgnldS2rlPNNdbxMag7QxAgkm6IPXzQqca8P2dwI73U-WUCVZ5HkiLpDcDtdz3GPLocOp2iXnM-O9edeL8Tt3b8GXGzUEuamRu_V5zcD8Op2rF1LqL8CaCV47QLLiYXcIeL-ac4" 
-                           alt="통리초등학교 로고" 
-                           class="h-16 w-auto object-contain">
+                    <img src="https://blogger.googleusercontent.com/img/a/AVvXsEh08bHS4da9YBugh4FX9Li0Of7ihbcIKFVY6MfTJvvBMpy8jKmLFFvoTgnldS2rlPNNdbxMag7QxAgkm6IPXzQqca8P2dwI73U-WUCVZ5HkiLpDcDtdz3GPLocOp2iXnM-O9edeL8Tt3b8GXGzUEuamRu_V5zcD8Op2rF1LqL8CaCV47QLLiYXcIeL-ac4" alt="통리초등학교 로고" class="h-16 w-auto object-contain">
                 </div>
-
-                <div class="inline-block bg-sky-600/90 text-white px-4 py-1 rounded-full text-sm font-bold mb-4 animate-bounce">
-                    ✨ 2026 통리초등학교 맞춤형 영어캠프 제안
+                <div class="inline-block bg-blue-600/90 text-white px-4 py-1 rounded-full text-sm font-bold mb-4">
+                    ✨ 2026 통리초등학교 맞춤형 영어캠프 안내 초안
                 </div>
-                <h1 class="text-4xl md:text-6xl font-black mb-6 leading-tight drop-shadow-lg">
-                    Which Way Will You Go?<br>
-                    <span class="text-yellow-300">최적의 학습 환경을 선택하세요</span>
+                <h1 class="text-4xl md:text-6xl font-black mb-4 leading-tight drop-shadow-lg">
+                    Active Learning in Baguio<br>
+                    <span class="text-yellow-300">바기오 JIC Green Valley Premium Campus</span>
                 </h1>
-                
-                <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4 text-lg font-bold">
-                    <div class="bg-white/10 backdrop-blur-md border border-white/20 p-4 rounded-lg">
-                        🗓️ 11월 14일 (토) ~ 11월 28일 (토)
-                    </div>
-                    <div class="bg-white/10 backdrop-blur-md border border-white/20 p-4 rounded-lg text-base flex flex-col justify-center">
-                        ✈️ 아시아나항공 (인천 ↔ 클락)
-                    </div>
-                    <div class="bg-white/10 backdrop-blur-md border border-white/20 p-4 rounded-lg">
-                        👥 학생 7명 + 교사 2명
-                    </div>
+                <p class="text-lg md:text-xl text-blue-100 max-w-2xl mb-8 font-medium">
+                    10,000㎡ 프리미엄 캠퍼스 · 2023년 리모델링 기숙사 · TEP 테마 ESL · 골프·요가·바리스타 연계
+                </p>
+                <div class="mt-4 flex flex-col sm:flex-row justify-center gap-4 text-lg font-bold">
+                    <div class="bg-white/10 backdrop-blur-md border border-white/20 p-4 rounded-lg">🗓️ 11월 14일 (토) ~ 11월 28일 (토)</div>
+                    <div class="bg-white/10 backdrop-blur-md border border-white/20 p-4 rounded-lg text-base flex flex-col justify-center">✈️ 아시아나항공 (인천 ↔ 클락)</div>
+                    <div class="bg-white/10 backdrop-blur-md border border-white/20 p-4 rounded-lg">👥 학생 7명 + 교사 2명</div>
                 </div>
             </div>
         </section>
 
-        <!-- Comparison Section -->
-        <section id="comparison" class="py-20 bg-white">
+        <!-- JIC Highlights -->
+        <section id="highlights" class="py-20 bg-white">
             <div class="container mx-auto px-4">
                 <div class="text-center mb-16">
-                    <span class="text-red-600 font-bold tracking-wider uppercase">Strategic Proposal</span>
-                    <h2 class="text-3xl md:text-4xl font-bold mt-2">안전하고 쾌적한 바기오, 두 가지 학습 스타일</h2>
-                    <p class="text-slate-500 mt-4">에어컨이 필요 없는 교육도시 바기오 내에서, 목표에 맞는 최적의 어학원을 선택하세요.</p>
+                    <span class="text-blue-700 font-bold tracking-wider uppercase">Selected Academy</span>
+                    <h2 class="text-3xl md:text-4xl font-bold mt-2">바기오 JIC — 통리초 맞춤형 학습 환경</h2>
+                    <p class="text-slate-500 mt-4 max-w-3xl mx-auto">필리핀 교육도시 바기오의 쾌적한 고산 기후 속, JIC Green Valley Premium Campus에서 능동형 영어 학습과 안전한 캠퍼스 생활을 경험합니다.</p>
                 </div>
 
-                <div class="relative max-w-6xl mx-auto">
-                    <div class="grid md:grid-cols-2 gap-8 md:gap-16">
-                        <!-- VS Badge -->
-                        <div class="hidden md:flex vs-badge bg-red-600 text-white w-14 h-14 rounded-full items-center justify-center font-black text-xl shadow-xl border-4 border-white">
-                            VS
-                        </div>
+                <div class="max-w-6xl mx-auto mb-12 rounded-2xl overflow-hidden shadow-xl border border-slate-200">
+                    <img src="assets/images/campus-main.jpg" alt="JIC Green Valley Premium Campus 전경" class="w-full h-64 md:h-96 object-cover">
+                </div>
 
-                        <!-- Option A: Baguio CNS -->
-                        <div class="bg-slate-50 border-2 border-slate-200 p-8 rounded-2xl flex flex-col hover:border-green-500 transition-colors shadow-lg">
-                            <div class="text-center mb-6">
-                                <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-bold">Option A</span>
-                                <h3 class="text-3xl font-bold mt-3 text-slate-800">바기오 CNS 어학원</h3>
-                                <p class="text-slate-500 font-medium">스파르타 집중 관리형</p>
-                            </div>
-                            
-                            <div class="space-y-4 text-sm text-slate-700 flex-grow">
-                                <div class="bg-white p-4 rounded-lg border border-slate-100">
-                                    <strong class="text-lg text-green-700 block mb-1">👍 강점 (Pros)</strong>
-                                    <ul class="list-disc list-inside space-y-1">
-                                        <li><strong>소수정예 관리:</strong> 학생 한명 한명을 세밀하게 케어</li>
-                                        <li><strong>강도 높은 커리큘럼:</strong> 저녁 늦게까지 이어지는 밀착 학습</li>
-                                        <li><strong>전통과 노하우:</strong> 오랜 기간 검증된 주니어/학생 캠프 운영</li>
-                                    </ul>
-                                </div>
-                                <div class="bg-white p-4 rounded-lg border border-slate-100">
-                                    <strong class="text-lg text-red-500 block mb-1">⚠️ 고려사항 (Cons)</strong>
-                                    <ul class="list-disc list-inside space-y-1">
-                                        <li><strong>엄격한 규율:</strong> 통제된 생활과 학습량으로 초반 적응 필요</li>
-                                        <li><strong>부대시설:</strong> 학습에 초점이 맞춰져 부대시설은 다소 기본적임</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Option B: Baguio JIC -->
-                        <div class="bg-slate-50 border-2 border-slate-200 p-8 rounded-2xl flex flex-col hover:border-blue-500 transition-colors shadow-lg">
-                            <div class="text-center mb-6">
-                                <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-bold">Option B</span>
-                                <h3 class="text-3xl font-bold mt-3 text-slate-800">바기오 JIC 어학원</h3>
-                                <p class="text-slate-500 font-medium">프리미엄 능동학습형 (Green Valley)</p>
-                            </div>
-                            
-                            <div class="space-y-4 text-sm text-slate-700 flex-grow">
-                                <div class="bg-white p-4 rounded-lg border border-slate-100">
-                                    <strong class="text-lg text-blue-700 block mb-1">👍 강점 (Pros)</strong>
-                                    <ul class="list-disc list-inside space-y-1">
-                                        <li><strong>최상급 인프라:</strong> 1만 평 대지, 23년 리모델링된 최고급 기숙사</li>
-                                        <li><strong>테마별 능동 학습:</strong> 카페 바리스타, 요가, 골프 등 접목형 ESL</li>
-                                        <li><strong>교내 편의시설:</strong> 대형 K-Mart, 학생 라운지, 헬스장 완비</li>
-                                    </ul>
-                                </div>
-                                <div class="bg-white p-4 rounded-lg border border-slate-100">
-                                    <strong class="text-lg text-red-500 block mb-1">⚠️ 고려사항 (Cons)</strong>
-                                    <ul class="list-disc list-inside space-y-1">
-                                        <li><strong>자율성 요구:</strong> 스파르타 대비 자유도가 높아 동기부여 필요</li>
-                                        <li><strong>규모 대비 동선:</strong> 캠퍼스가 넓어 내부 이동 거리가 있음</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+                <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+                    <div class="highlight-card bg-slate-50 p-8 rounded-2xl shadow-lg">
+                        <div class="text-3xl mb-4">🏫</div>
+                        <h3 class="text-xl font-bold mb-3 text-slate-800">최상급 캠퍼스 인프라</h3>
+                        <ul class="text-sm text-slate-600 space-y-2">
+                            <li>• 약 10,000㎡ 그린밸리 부지</li>
+                            <li>• 2023년 전면 리모델링 프리미엄 기숙사</li>
+                            <li>• 교내 K-Store, 카페, 헬스장, 골프 연습장</li>
+                        </ul>
+                    </div>
+                    <div class="highlight-card bg-slate-50 p-8 rounded-2xl shadow-lg">
+                        <div class="text-3xl mb-4">📚</div>
+                        <h3 class="text-xl font-bold mb-3 text-slate-800">TEP Theme English Program</h3>
+                        <ul class="text-sm text-slate-600 space-y-2">
+                            <li>• 관심사 기반 1:1 테마 ESL 수업</li>
+                            <li>• 초·중급 맞춤 TEP ESL 8~10 과정</li>
+                            <li>• Speaking·Reading·Writing 4영역 균형 학습</li>
+                        </ul>
+                    </div>
+                    <div class="highlight-card bg-slate-50 p-8 rounded-2xl shadow-lg">
+                        <div class="text-3xl mb-4">🎯</div>
+                        <h3 class="text-xl font-bold mb-3 text-slate-800">Active Learning</h3>
+                        <ul class="text-sm text-slate-600 space-y-2">
+                            <li>• 바리스타 인턴십, 골프·요가·댄스</li>
+                            <li>• 학생 라운지·미니 극장·마사지룸</li>
+                            <li>• 주말 바기오 문화·자연 체험 연계</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- One-Glance Weekly Overview -->
+        <!-- Roadmap -->
         <section id="overview" class="py-20 bg-slate-50 border-t">
             <div class="container mx-auto px-4">
                 <div class="text-center mb-12">
                     <span class="text-indigo-600 font-bold tracking-wider uppercase">14 Nights 15 Days Roadmap</span>
                     <h2 class="text-3xl md:text-4xl font-bold mt-2">14박 15일 전체 로드맵 (아시아나항공)</h2>
-                    <p class="text-slate-500 mt-2">출국부터 귀국까지, 바기오에서 진행되는 2주간의 흐름을 확인하세요.</p>
+                    <p class="text-slate-500 mt-2">출국부터 귀국까지, JIC 캠퍼스에서 진행되는 2주간의 흐름입니다.</p>
                 </div>
-
-                <div class="max-w-6xl mx-auto">
-                    <!-- Roadmap Visualization -->
-                    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                        
-                        <!-- Step 1: Start -->
-                        <div class="roadmap-step flex flex-col items-center text-center">
-                            <div class="w-16 h-16 bg-white border-4 border-indigo-500 rounded-full flex items-center justify-center text-2xl shadow-lg z-10 mb-4">
-                                🛫
-                            </div>
-                            <h3 class="font-bold text-lg text-slate-800">1일차 (11/14, 토)</h3>
-                            <p class="text-sm text-indigo-600 font-bold mb-2">출국 & 이동</p>
-                            <div class="bg-white p-4 rounded-lg shadow-sm border border-slate-200 text-sm w-full">
-                                <ul class="text-left space-y-1 text-slate-600">
-                                    <li>• 인천공항 집결</li>
-                                    <li>• <strong>OZ707</strong> 21:55 인천 출발</li>
-                                    <li>• (익일 00:50) 클락 도착</li>
-                                    <li>• 전용 차량으로 바기오 이동</li>
-                                </ul>
-                            </div>
+                <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div class="roadmap-step flex flex-col items-center text-center">
+                        <div class="w-16 h-16 bg-white border-4 border-indigo-500 rounded-full flex items-center justify-center text-2xl shadow-lg z-10 mb-4">🛫</div>
+                        <h3 class="font-bold text-lg text-slate-800">1일차 (11/14, 토)</h3>
+                        <p class="text-sm text-indigo-600 font-bold mb-2">출국 & 이동</p>
+                        <div class="bg-white p-4 rounded-lg shadow-sm border border-slate-200 text-sm w-full">
+                            <ul class="text-left space-y-1 text-slate-600">
+                                <li>• 인천공항 집결</li>
+                                <li>• <strong>OZ707</strong> 21:55 인천 출발</li>
+                                <li>• (익일 00:50) 클락 도착</li>
+                                <li>• 전용 차량으로 바기오 JIC 이동</li>
+                            </ul>
                         </div>
-
-                        <!-- Step 2: Orientation -->
-                        <div class="roadmap-step flex flex-col items-center text-center">
-                            <div class="w-16 h-16 bg-white border-4 border-indigo-500 rounded-full flex items-center justify-center text-2xl shadow-lg z-10 mb-4">
-                                📝
-                            </div>
-                            <h3 class="font-bold text-lg text-slate-800">2일차 (11/15, 일)</h3>
-                            <p class="text-sm text-indigo-600 font-bold mb-2">적응 & 오리엔테이션</p>
-                            <div class="bg-white p-4 rounded-lg shadow-sm border border-slate-200 text-sm w-full">
-                                <ul class="text-left space-y-1 text-slate-600">
-                                    <li>• 캠퍼 도착 및 충분한 휴식</li>
-                                    <li>• <strong>레벨 테스트</strong> 진행</li>
-                                    <li>• 생필품 쇼핑 및 현지 적응</li>
-                                    <li>• 캠퍼스 투어 및 안전 교육</li>
-                                </ul>
-                            </div>
+                    </div>
+                    <div class="roadmap-step flex flex-col items-center text-center">
+                        <div class="w-16 h-16 bg-white border-4 border-indigo-500 rounded-full flex items-center justify-center text-2xl shadow-lg z-10 mb-4">📝</div>
+                        <h3 class="font-bold text-lg text-slate-800">2일차 (11/15, 일)</h3>
+                        <p class="text-sm text-indigo-600 font-bold mb-2">적응 & 오리엔테이션</p>
+                        <div class="bg-white p-4 rounded-lg shadow-sm border border-slate-200 text-sm w-full">
+                            <ul class="text-left space-y-1 text-slate-600">
+                                <li>• JIC 캠퍼스 도착 및 휴식</li>
+                                <li>• <strong>레벨 테스트</strong> (CEFR 기준)</li>
+                                <li>• K-Store 생필품 구매</li>
+                                <li>• 캠퍼스 투어 및 안전 교육</li>
+                            </ul>
                         </div>
-
-                        <!-- Step 3: Intensive Week -->
-                        <div class="roadmap-step flex flex-col items-center text-center">
-                            <div class="w-16 h-16 bg-white border-4 border-indigo-500 rounded-full flex items-center justify-center text-2xl shadow-lg z-10 mb-4">
-                                🏫
-                            </div>
-                            <h3 class="font-bold text-lg text-slate-800">3~14일차 (11/16~27)</h3>
-                            <p class="text-sm text-indigo-600 font-bold mb-2">집중 수업 & 체험</p>
-                            <div class="bg-white p-4 rounded-lg shadow-sm border border-slate-200 text-sm w-full">
-                                <ul class="text-left space-y-1 text-slate-600">
-                                    <li>• <strong>2주간 정규수업 집중</strong></li>
-                                    <li>• 1:1 맞춤 및 테마별 ESL</li>
-                                    <li>• 주말 특별 교외 문화 체험</li>
-                                    <li>• 11/27(금) 수료식 및 송별회</li>
-                                </ul>
-                            </div>
+                    </div>
+                    <div class="roadmap-step flex flex-col items-center text-center">
+                        <div class="w-16 h-16 bg-white border-4 border-indigo-500 rounded-full flex items-center justify-center text-2xl shadow-lg z-10 mb-4">🏫</div>
+                        <h3 class="font-bold text-lg text-slate-800">3~14일차 (11/16~27)</h3>
+                        <p class="text-sm text-indigo-600 font-bold mb-2">TEP ESL 집중 & 체험</p>
+                        <div class="bg-white p-4 rounded-lg shadow-sm border border-slate-200 text-sm w-full">
+                            <ul class="text-left space-y-1 text-slate-600">
+                                <li>• <strong>2주간 TEP ESL 정규수업</strong></li>
+                                <li>• 1:1 테마·그룹·이브닝 클래스</li>
+                                <li>• 주말 Burnham Park 등 문화 체험</li>
+                                <li>• 11/27(금) 수료식 및 송별회</li>
+                            </ul>
                         </div>
-
-                        <!-- Step 4: Return -->
-                        <div class="roadmap-step flex flex-col items-center text-center">
-                            <div class="w-16 h-16 bg-white border-4 border-indigo-500 rounded-full flex items-center justify-center text-2xl shadow-lg z-10 mb-4">
-                                🏠
-                            </div>
-                            <h3 class="font-bold text-lg text-slate-800">15일차 (11/28, 토)</h3>
-                            <p class="text-sm text-indigo-600 font-bold mb-2">귀국 & 휴식</p>
-                            <div class="bg-white p-4 rounded-lg shadow-sm border border-slate-200 text-sm w-full">
-                                <ul class="text-left space-y-1 text-slate-600">
-                                    <li>• 클락 공항으로 야간 이동</li>
-                                    <li>• <strong>OZ708</strong> 02:00 클락 출발</li>
-                                    <li>• 07:05 인천공항 안전 도착</li>
-                                    <li>• 귀가 후 주말 푹 휴식</li>
-                                </ul>
-                            </div>
+                    </div>
+                    <div class="roadmap-step flex flex-col items-center text-center">
+                        <div class="w-16 h-16 bg-white border-4 border-indigo-500 rounded-full flex items-center justify-center text-2xl shadow-lg z-10 mb-4">🏠</div>
+                        <h3 class="font-bold text-lg text-slate-800">15일차 (11/28, 토)</h3>
+                        <p class="text-sm text-indigo-600 font-bold mb-2">귀국 & 휴식</p>
+                        <div class="bg-white p-4 rounded-lg shadow-sm border border-slate-200 text-sm w-full">
+                            <ul class="text-left space-y-1 text-slate-600">
+                                <li>• 클락 공항으로 야간 이동</li>
+                                <li>• <strong>OZ708</strong> 02:00 클락 출발</li>
+                                <li>• 07:05 인천공항 도착</li>
+                                <li>• 귀가 후 주말 휴식</li>
+                            </ul>
                         </div>
-
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Academy Introduction Section -->
-        <section id="academies" class="py-20 bg-white border-t">
+        <!-- Academy -->
+        <section id="academy" class="py-20 bg-white border-t">
             <div class="container mx-auto px-4">
                 <div class="text-center mb-12">
                     <span class="text-slate-500 font-bold tracking-wider uppercase">Academy Details</span>
-                    <h2 class="text-3xl md:text-4xl font-bold mt-2">어학원 상세 정보</h2>
-                    <p class="text-slate-500 mt-2">두 어학원의 특징을 비교하고, 하단의 영상으로 생생한 현장을 확인하세요.</p>
+                    <h2 class="text-3xl md:text-4xl font-bold mt-2">JIC Tutorial Language Inc. — Green Valley Premium Campus</h2>
+                    <p class="text-slate-500 mt-2">공식 브로슈어(2023 Green Valley) 기준 캠퍼스·커리큘럼 안내</p>
                 </div>
 
-                <!-- Academy Tabs -->
-                <div class="max-w-6xl mx-auto bg-slate-100 p-2 rounded-t-xl flex">
-                    <button class="academy-tab flex-1 py-3 text-center rounded-lg active text-green-700 border-green-600 border-b-2 font-bold bg-white" onclick="showAcademy('cns')" id="tab-cns">
-                        <i class="fa-solid fa-tree mr-2"></i>바기오 CNS 어학원
-                    </button>
-                    <button class="academy-tab flex-1 py-3 text-center rounded-lg text-slate-500 hover:bg-white/50 hover:text-blue-600" onclick="showAcademy('jic')" id="tab-jic">
-                        <i class="fa-solid fa-crown mr-2"></i>바기오 JIC 어학원
-                    </button>
-                </div>
+                <div class="max-w-6xl mx-auto bg-white border border-slate-200 rounded-2xl shadow-lg p-6 md:p-10">
+                    <div class="flex flex-wrap items-center gap-3 mb-8">
+                        <h3 class="text-2xl font-bold text-blue-700">JIC Green Valley Premium Campus</h3>
+                        <span class="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded font-bold">Baguio City, Philippines</span>
+                        <a href="https://baguio-jic.com/ko/" target="_blank" rel="noopener" class="text-sm text-blue-600 hover:underline ml-auto"><i class="fa-solid fa-globe mr-1"></i>baguio-jic.com</a>
+                    </div>
 
-                <!-- Academy Content Container -->
-                <div class="max-w-6xl mx-auto bg-white border border-t-0 border-slate-200 rounded-b-xl shadow-lg p-6 md:p-10 min-h-[500px]">
-                    
-                    <!-- Content: CNS -->
-                    <div id="content-cns" class="animate-fade-in block">
-                        <div class="flex items-center gap-3 mb-6">
-                            <h3 class="text-2xl font-bold text-green-700">CNS International Language School</h3>
-                            <span class="bg-green-100 text-green-700 text-xs px-2 py-1 rounded font-bold">Baguio City</span>
-                        </div>
-                        
-                        <div class="grid md:grid-cols-2 gap-8">
-                            <div class="space-y-4 text-slate-700">
-                                <div class="bg-slate-50 p-4 rounded-lg">
-                                    <h4 class="font-bold text-lg mb-2"><i class="fa-solid fa-circle-check text-green-500 mr-2"></i>핵심 개요</h4>
-                                    <ul class="list-disc list-inside space-y-1 text-sm">
-                                        <li><strong>위치:</strong> 필리핀 바기오 시티 (교육도시, 쾌적한 고산지대)</li>
-                                        <li><strong>운영 형태:</strong> 소수정예 집중형, 맞춤형 관리 시스템</li>
-                                        <li><strong>특징:</strong> 스파르타식 운영, 엄격한 면학 분위기 조성</li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-lg mb-2"><i class="fa-solid fa-book text-green-500 mr-2"></i>프로그램 & 커리큘럼</h4>
-                                    <p class="text-sm mb-2">초등학생의 기본기를 다지고 확실한 성과를 내기 위한 집중 커리큘럼입니다.</p>
-                                    <ul class="list-disc list-inside space-y-1 text-sm bg-slate-50 p-4 rounded-lg">
-                                        <li><strong>1:1 수업:</strong> Reading, Speaking, Grammar, Writing 밀착 지도</li>
-                                        <li><strong>생활 관리:</strong> 도서관 의무 자율학습, 매일 단어/문장 테스트</li>
-                                        <li><strong>식단 및 환경:</strong> 한식 위주 제공, 학업 외 불필요한 외출 제한</li>
-                                    </ul>
-                                </div>
+                    <div class="grid md:grid-cols-2 gap-8 mb-10">
+                        <div class="space-y-4 text-slate-700">
+                            <div class="bg-slate-50 p-4 rounded-lg">
+                                <h4 class="font-bold text-lg mb-2"><i class="fa-solid fa-circle-check text-blue-500 mr-2"></i>캠퍼스 개요</h4>
+                                <ul class="list-disc list-inside space-y-1 text-sm">
+                                    <li><strong>위치:</strong> 바기오 그린밸리 — 연중 서늘한 필리핀 Summer Capital</li>
+                                    <li><strong>규모:</strong> 약 10,000㎡ (약 3,000평) 대형 캠퍼스</li>
+                                    <li><strong>기숙사:</strong> 2023년 리모델링 — Single / Double / Quad Room</li>
+                                    <li><strong>생활:</strong> 3식 제공, 세탁·청소 서비스 포함</li>
+                                </ul>
                             </div>
-                            <div class="space-y-4">
-                                <img src="https://tse4.mm.bing.net/th/id/OIP.Nb9iHS85TW3M7jsR8uwgswHaFj?w=474&h=379&c=7&p=0" alt="Baguio View" class="rounded-xl shadow-md w-full h-48 object-cover">
-                                <div class="bg-green-50 p-4 rounded-lg border border-green-200">
-                                    <h4 class="font-bold text-green-800 mb-1">📢 철저한 관리 감독 체계</h4>
-                                    <p class="text-sm text-green-700">단기간 내에 학습 습관을 형성하고 최대한의 효율을 이끌어내기 위해, 교사와 스태프의 철저한 밀착 관리가 이루어집니다.</p>
+                            <div>
+                                <h4 class="font-bold text-lg mb-2"><i class="fa-solid fa-book text-blue-500 mr-2"></i>통리초 추천 과정: TEP ESL</h4>
+                                <p class="text-sm mb-2">초등·중급 학습자를 위한 JIC Premium Campus 시그니처 과정입니다. 관심 주제로 영어를 배우며 4영역을 균형 있게 학습합니다.</p>
+                                <div class="overflow-x-auto">
+                                    <table class="w-full text-sm border border-slate-200 rounded-lg">
+                                        <thead class="bg-blue-50">
+                                            <tr>
+                                                <th class="p-2 border-b text-left">과정</th>
+                                                <th class="p-2 border-b">TEP 1:1</th>
+                                                <th class="p-2 border-b">General 1:1</th>
+                                                <th class="p-2 border-b">Group</th>
+                                                <th class="p-2 border-b">Evening</th>
+                                                <th class="p-2 border-b">Total</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="border-b"><td class="p-2 font-bold">TEP ESL 8</td><td class="p-2 text-center">2</td><td class="p-2 text-center">1</td><td class="p-2 text-center">3</td><td class="p-2 text-center">2*</td><td class="p-2 text-center font-bold">8</td></tr>
+                                            <tr class="border-b"><td class="p-2 font-bold">TEP ESL 9</td><td class="p-2 text-center">2</td><td class="p-2 text-center">2</td><td class="p-2 text-center">3</td><td class="p-2 text-center">2*</td><td class="p-2 text-center font-bold">9</td></tr>
+                                            <tr><td class="p-2 font-bold">TEP ESL 10</td><td class="p-2 text-center">2</td><td class="p-2 text-center">3</td><td class="p-2 text-center">3</td><td class="p-2 text-center">2*</td><td class="p-2 text-center font-bold">10</td></tr>
+                                        </tbody>
+                                    </table>
                                 </div>
-                                <div class="text-center mt-4">
-                                    <a href="#video" class="inline-flex items-center text-green-600 hover:text-green-800 font-bold underline">
-                                        <i class="fa-solid fa-video mr-2"></i>아래에서 CNS 어학원 영상 확인하기
-                                    </a>
-                                </div>
+                                <p class="text-xs text-slate-500 mt-2">* 이브닝 클래스 선택 수강 · 레벨 테스트 후 TEP ESL 8~10 배정</p>
+                            </div>
+                        </div>
+                        <div class="space-y-4">
+                            <img src="assets/images/campus-dorm.jpg" alt="JIC 프리미엄 기숙사" class="rounded-xl shadow-md w-full h-48 object-cover">
+                            <div class="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                                <h4 class="font-bold text-blue-800 mb-2">📢 Active Learning 컨셉</h4>
+                                <p class="text-sm text-blue-700 leading-relaxed">교실 안의 영어를 넘어, 학생이 직접 참여하는 학습 환경을 제공합니다. 그룹·이브닝 클래스, 바리스타 인턴십, 프레젠테이션, 골프·요가·댄스·음악, 학교 추천 투어 등 다양한 액티비티가 수업과 연계됩니다.</p>
+                            </div>
+                            <div class="bg-slate-50 p-4 rounded-lg">
+                                <h4 class="font-bold text-slate-800 mb-2">부가 프로그램 (선택)</h4>
+                                <ul class="text-sm text-slate-600 space-y-1">
+                                    <li>• 바리스타 트레이닝 — 12시간 / 4주 3,500 pesos</li>
+                                    <li>• 골프 클래스 — 12회 / 4주 4,000 pesos</li>
+                                    <li>• 이브닝: Grammar, Cinema English, Yoga, Zumba 등</li>
+                                </ul>
+                            </div>
+                            <div class="text-center">
+                                <a href="#video" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-bold underline">
+                                    <i class="fa-solid fa-video mr-2"></i>캠퍼스 영상 미리보기
+                                </a>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Content: JIC -->
-                    <div id="content-jic" class="hidden animate-fade-in">
-                        <div class="flex items-center gap-3 mb-6">
-                            <h3 class="text-2xl font-bold text-blue-700">JIC Green Valley Premium Campus</h3>
-                            <span class="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded font-bold">Baguio City</span>
-                        </div>
-                        
-                        <div class="grid md:grid-cols-2 gap-8">
-                            <div class="space-y-4 text-slate-700">
-                                <div class="bg-slate-50 p-4 rounded-lg">
-                                    <h4 class="font-bold text-lg mb-2"><i class="fa-solid fa-circle-check text-blue-500 mr-2"></i>핵심 개요</h4>
-                                    <ul class="list-disc list-inside space-y-1 text-sm">
-                                        <li><strong>위치:</strong> 바기오 그린밸리 내 10,000평방미터 대규모 캠퍼스</li>
-                                        <li><strong>시설 (2023년 리모델링):</strong> 프리미엄 기숙사, 교내 대형 마트(K-Mart), 헬스장, 골프 연습장</li>
-                                        <li><strong>특징:</strong> 학습과 쉼이 결합된 'Active Learning' 추구</li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-lg mb-2"><i class="fa-solid fa-book text-blue-500 mr-2"></i>코스 & 커리큘럼</h4>
-                                    <p class="text-sm mb-2">교실 안의 영어를 넘어, 자신이 좋아하는 주제로 영어를 배우는 TEP 과정이 돋보입니다.</p>
-                                    <ul class="list-disc list-inside space-y-1 text-sm bg-slate-50 p-4 rounded-lg">
-                                        <li><strong>TEP (Theme English Program):</strong> 관심사 기반 1:1 영어 토론/수업</li>
-                                        <li><strong>참여형 프로그램:</strong> 바리스타 인턴십, 골프/요가 등 다채로운 액티비티 연계</li>
-                                        <li><strong>시설 인프라:</strong> 라운지, 영화관, 마사지룸 등 교내에서 모든 생활 및 휴식 가능</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="space-y-4">
-                                <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="JIC Premium Campus Concept" class="rounded-xl shadow-md w-full h-48 object-cover">
-                                <div class="bg-blue-50 p-4 rounded-lg border border-blue-200">
-                                    <h4 class="font-bold text-blue-800 mb-1">📢 JIC 추천 포인트</h4>
-                                    <p class="text-sm text-blue-700">안전한 캠퍼스 울타리 안에서 최고급 편의시설을 누리며 스트레스 없이 자율적으로 학습할 수 있는 환경입니다. 체험형 학습을 중시할 때 가장 적합합니다.</p>
-                                </div>
-                                <div class="text-center mt-4">
-                                    <a href="#video" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-bold underline">
-                                        <i class="fa-solid fa-video mr-2"></i>아래에서 JIC 프리미엄 어학원 영상 확인하기
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </section>
 
-        <!-- Dynamic Weekly Schedule Section -->
-        <section id="curriculum" class="py-20 bg-slate-50 border-t">
+        <!-- Facilities -->
+        <section id="facilities" class="py-20 bg-slate-50 border-t">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <span class="text-blue-600 font-bold tracking-wider uppercase">Campus Facilities</span>
+                    <h2 class="text-3xl md:text-4xl font-bold mt-2">JIC Green Valley 캠퍼스 시설</h2>
+                    <p class="text-slate-500 mt-2">캠퍼스 울타리 안에서 학습·생활·휴식이 가능한 올인원 환경</p>
+                </div>
+                <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-6">
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg border border-slate-200 hover-zoom">
+                        <img src="assets/images/campus-map.jpg" alt="JIC 캠퍼스 맵" class="w-full h-56 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg">캠퍼스 맵</h3>
+                            <p class="text-sm text-slate-600 mt-1">Academic Building, Dormitories, North/South Field, Gym, K-Store, Cafeteria, Fish Pond</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg border border-slate-200 hover-zoom">
+                        <img src="assets/images/campus-leisure.jpg" alt="JIC Student Leisure Center" class="w-full h-56 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg">Student Leisure Center</h3>
+                            <p class="text-sm text-slate-600 mt-1">라운지, 미니 극장, 당구·탁구, 마사지룸, 마사지 체어, 클리닉</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg border border-slate-200 hover-zoom">
+                        <img src="assets/images/campus-facilities.jpg" alt="JIC 캠퍼스 부대시설" class="w-full h-56 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg">Academic & Outdoor</h3>
+                            <p class="text-sm text-slate-600 mt-1">1:1·그룹 교실, Presentation Room, Gym, 골프 연습장, North Park</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg border border-slate-200 hover-zoom">
+                        <img src="assets/images/campus-dorm.jpg" alt="JIC 기숙사" class="w-full h-56 object-cover">
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg">프리미엄 기숙사</h3>
+                            <p class="text-sm text-slate-600 mt-1">2023년 리모델링 · 개별 샤워·화장실 · 3식·세탁·청소 포함</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Schedule -->
+        <section id="curriculum" class="py-20 bg-white border-t">
             <div class="container mx-auto px-4">
                 <div class="text-center mb-10">
                     <span class="text-blue-600 font-bold tracking-wider uppercase">Detail Schedule</span>
-                    <h2 class="text-3xl md:text-4xl font-bold mt-2">일일 상세 시간표 비교</h2>
-                    <p class="text-slate-500 mt-2">버튼을 클릭하여 각 어학원의 실제 하루 일과를 비교해보세요.</p>
+                    <h2 class="text-3xl md:text-4xl font-bold mt-2">JIC Green Valley 일일 시간표</h2>
+                    <p class="text-slate-500 mt-2">JIC 공식 커리큘럼 기준 (45분 수업 + 5분 휴식)</p>
                 </div>
 
-                <!-- Option Switcher -->
-                <div class="flex justify-center gap-4 mb-8">
-                    <button onclick="switchSchedule('baguio')" id="btn-baguio" class="option-btn px-6 py-3 rounded-full bg-white border-2 border-slate-300 text-slate-500 font-bold text-lg hover:border-green-500 hover:text-green-600 flex items-center gap-2">
-                        <i class="fa-solid fa-tree"></i> Option A: 바기오 CNS
-                    </button>
-                    <button onclick="switchSchedule('jic')" id="btn-jic" class="option-btn px-6 py-3 rounded-full bg-blue-600 border-2 border-blue-600 text-white font-bold text-lg shadow-lg flex items-center gap-2 active">
-                        <i class="fa-solid fa-crown"></i> Option B: 바기오 JIC
-                    </button>
-                </div>
-
-                <!-- Alert Message -->
-                <div class="max-w-5xl mx-auto mb-6 custom-alert p-4 rounded-lg shadow-sm flex items-start animate-fade-in-up">
-                    <div class="text-sky-600 text-xl mr-3 flex-shrink-0 mt-0.5">
-                        <i class="fa-solid fa-circle-info"></i>
-                    </div>
+                <div class="max-w-5xl mx-auto mb-6 custom-alert p-4 rounded-lg shadow-sm flex items-start">
+                    <div class="text-sky-600 text-xl mr-3 flex-shrink-0 mt-0.5"><i class="fa-solid fa-circle-info"></i></div>
                     <div>
                         <h4 class="font-bold text-sky-800 text-sm md:text-base">맞춤형 일정 안내 및 학부모 안심 리포트</h4>
                         <p class="text-slate-700 text-xs md:text-sm mt-1 leading-relaxed">
-                            본 일정은 각 어학원의 표준 커리큘럼 기준입니다. 학교 측의 요청에 따라 <strong class="bg-yellow-200 px-1 rounded">교외 액티비티 추가 및 시간표 조정</strong>이 유연하게 가능합니다.<br>
-                            매일 일정이 끝난 후 인솔자를 통해 학부모님들께 아이들의 생생한 학습 및 활동 모습을 <strong class="text-sky-700">데일리 안심 리포트(사진/영상)</strong> 형태로 전송해 드립니다.
+                            본 일정은 JIC 표준 커리큘럼 기준 안내 초안입니다. 학교 요청에 따라 <strong class="bg-yellow-200 px-1 rounded">교외 액티비티 추가 및 시간표 조정</strong>이 가능합니다.<br>
+                            매일 인솔자를 통해 <strong class="text-sky-700">데일리 안심 리포트(사진/영상)</strong>를 전송해 드립니다.
                         </p>
                     </div>
                 </div>
 
-                <!-- Table Container -->
                 <div class="max-w-6xl mx-auto bg-white rounded-xl shadow-xl border border-slate-200 overflow-hidden">
                     <div class="p-4 md:p-6 bg-slate-50 border-b flex justify-between items-center">
-                        <h3 id="schedule-title" class="text-xl md:text-2xl font-bold text-slate-800">
-                            바기오 JIC 어학원 주간 일정
-                        </h3>
-                        <span class="text-xs text-slate-500 bg-white px-2 py-1 rounded border">* 모바일에서는 좌우로 스크롤</span>
+                        <h3 class="text-xl md:text-2xl font-bold text-blue-800">바기오 JIC Premium Campus — TEP ESL 일과</h3>
+                        <span class="text-xs text-slate-500 bg-white px-2 py-1 rounded border">* 모바일 좌우 스크롤</span>
                     </div>
-                    
-                    <!-- Scrollable Table Wrapper -->
                     <div class="overflow-x-auto">
                         <table class="w-full text-left border-collapse schedule-table min-w-[800px]">
                             <thead>
                                 <tr class="bg-slate-100 text-slate-600 text-sm uppercase tracking-wider">
                                     <th class="p-4 border-b w-1/6">Time</th>
-                                    <th class="p-4 border-b w-1/6">Lesson / Class</th>
+                                    <th class="p-4 border-b w-1/6">Activity</th>
                                     <th class="p-4 border-b w-2/6">평일 (월~금)</th>
                                     <th class="p-4 border-b w-2/6 bg-slate-200">주말 (토/일)</th>
                                 </tr>
                             </thead>
-                            <tbody id="schedule-body" class="text-sm md:text-base text-slate-700">
-                                <!-- JS Injects Rows Here -->
-                            </tbody>
+                            <tbody id="schedule-body" class="text-sm md:text-base text-slate-700"></tbody>
                         </table>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Video Gallery Section -->
-        <section id="video" class="py-20 bg-white border-t">
+        <!-- Video -->
+        <section id="video" class="py-20 bg-slate-50 border-t">
             <div class="container mx-auto px-4">
                 <div class="text-center mb-12">
                     <span class="text-sky-600 font-bold tracking-wider uppercase">Video Tour</span>
-                    <h2 class="text-3xl md:text-4xl font-bold mt-2">현지 분위기 미리보기</h2>
+                    <h2 class="text-3xl md:text-4xl font-bold mt-2">JIC Green Valley 현장 미리보기</h2>
                 </div>
-                
-                <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
-                    <!-- Video 1: Baguio CNS -->
+                <div class="max-w-4xl mx-auto">
                     <div class="bg-white p-4 rounded-2xl shadow-lg border border-slate-200">
                         <div class="flex items-center gap-2 mb-3">
-                            <span class="bg-green-100 text-green-700 px-2 py-1 rounded text-xs font-bold">Option A</span>
-                            <h4 class="font-bold text-lg">바기오 CNS 어학원</h4>
+                            <span class="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs font-bold">Premium Campus</span>
+                            <h4 class="font-bold text-lg">바기오 JIC Green Valley 프리미엄 캠퍼스</h4>
                         </div>
-                        <div class="relative aspect-video rounded-xl overflow-hidden bg-slate-900 cursor-pointer group" onclick="playVideo(this, 'xBesbQy3EB0')">
-                            <img src="https://img.youtube.com/vi/xBesbQy3EB0/maxresdefault.jpg" alt="CNS Video Thumbnail" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity">
-                            <div class="absolute inset-0 flex items-center justify-center play-overlay">
-                                <div class="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center border-2 border-white play-icon">
-                                    <span class="text-white text-3xl ml-2">▶</span>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="mt-3 text-sm text-slate-600">학업 분위기가 잡힌 환경과 커리큘럼을 확인하세요.</p>
-                    </div>
-
-                    <!-- Video 2: Baguio JIC Premium -->
-                    <div class="bg-white p-4 rounded-2xl shadow-lg border border-slate-200">
-                        <div class="flex items-center gap-2 mb-3">
-                            <span class="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs font-bold">Option B</span>
-                            <h4 class="font-bold text-lg">바기오 JIC 프리미엄 어학원</h4>
-                        </div>
-                        <!-- Updated to JIC Review Video (by 몰타스토리) -->
                         <div class="relative aspect-video rounded-xl overflow-hidden bg-slate-900 cursor-pointer group" onclick="playVideo(this, 'rBRevxee84k')">
-                            <img src="https://img.youtube.com/vi/rBRevxee84k/maxresdefault.jpg" alt="JIC Video Thumbnail" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity">
+                            <img src="assets/images/campus-main.jpg" alt="JIC Video Thumbnail" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity">
                             <div class="absolute inset-0 flex items-center justify-center play-overlay">
                                 <div class="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center border-2 border-white play-icon">
                                     <span class="text-white text-3xl ml-2">▶</span>
                                 </div>
                             </div>
                         </div>
-                        <p class="mt-3 text-sm text-slate-600">압도적인 부대시설과 리조트형 프리미엄 캠퍼스 리뷰를 확인하세요.</p>
+                        <p class="mt-3 text-sm text-slate-600">프리미엄 캠퍼스 시설, 기숙사, TEP ESL 수업 환경을 영상으로 확인하세요.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Personal Assistant Section (Checklist & Memo) -->
-        <section id="mynote" class="py-20 bg-slate-50 border-t">
+        <!-- Checklist & Memo -->
+        <section id="mynote" class="py-20 bg-white border-t">
             <div class="container mx-auto px-4">
                 <h2 class="text-3xl md:text-4xl font-bold text-center mb-4"><i class="fa-solid fa-suitcase-rolling text-sky-600"></i> 스마트 준비물 체크</h2>
-                
                 <div class="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
-                    <!-- 1. Smart Checklist -->
                     <div id="checklist" class="bg-white p-6 rounded-2xl shadow-lg border border-slate-200">
-                        <h3 class="text-xl font-bold mb-2 flex items-center gap-2">
-                            <i class="fa-solid fa-list-check text-green-600"></i> 어학연수 준비물
-                        </h3>
-                        <p class="text-sm text-slate-500 mb-6 border-b pb-4">특히 바기오는 서늘하므로 긴팔/바람막이를 필수로 챙겨주세요.</p>
-                        
-                        <div id="checklist-container" class="space-y-3 h-[400px] overflow-y-auto pr-2">
-                            <!-- JS generates items -->
-                        </div>
+                        <h3 class="text-xl font-bold mb-2 flex items-center gap-2"><i class="fa-solid fa-list-check text-green-600"></i> 어학연수 준비물</h3>
+                        <p class="text-sm text-slate-500 mb-6 border-b pb-4">바기오는 연중 서늘합니다. 긴팔·바람막이를 필수로 챙겨주세요.</p>
+                        <div id="checklist-container" class="space-y-3 h-[400px] overflow-y-auto pr-2"></div>
                         <div class="mt-6 text-center">
                             <button onclick="resetChecklist()" class="text-xs text-slate-400 underline hover:text-slate-600">체크리스트 초기화</button>
                         </div>
                     </div>
-
-                    <!-- 2. My Yellow Note -->
                     <div class="flex flex-col">
-                        <h3 class="text-xl font-bold mb-4 flex items-center gap-2 px-2">
-                            <i class="fa-solid fa-pen-to-square text-yellow-600"></i> MY 노트 (회의 메모)
-                        </h3>
+                        <h3 class="text-xl font-bold mb-4 flex items-center gap-2 px-2"><i class="fa-solid fa-pen-to-square text-yellow-600"></i> MY 노트 (회의 메모)</h3>
                         <div class="relative flex-grow">
-                            <!-- Yellow Pad Note -->
-                            <textarea id="travel-memo" 
-                                class="notepad w-full h-[480px] p-6 text-lg text-slate-800 resize-none rounded-lg"
-                                placeholder="학부모 미팅 내용, 학교 요청 사항, 학생 특이사항 등을 적어두세요.&#10;인터넷이 끊겨도 이 기기에 자동 저장됩니다."></textarea>
-                            
-                            <div id="save-status" class="absolute bottom-4 right-4 text-xs text-slate-500 bg-white/50 px-2 py-1 rounded">
-                                자동 저장 대기중...
-                            </div>
+                            <textarea id="travel-memo" class="notepad w-full h-[480px] p-6 text-lg text-slate-800 resize-none rounded-lg" placeholder="학부모 미팅 내용, 학교 요청 사항, 학생 특이사항 등을 적어두세요.&#10;인터넷이 끊겨도 이 기기에 자동 저장됩니다."></textarea>
+                            <div id="save-status" class="absolute bottom-4 right-4 text-xs text-slate-500 bg-white/50 px-2 py-1 rounded">자동 저장 대기중...</div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- [NEW] Emergency & Safety Section (T-safe24 단독 강조) -->
-        <section id="safety" class="py-20 bg-white border-t">
+        <!-- Safety -->
+        <section id="safety" class="py-20 bg-slate-50 border-t">
             <div class="container mx-auto px-4">
                 <div class="text-center mb-12">
                     <h2 class="text-3xl md:text-4xl font-bold mt-2">🚨 긴급상황 발생 시 대처방안</h2>
                     <p class="text-slate-500 mt-3 font-medium">안전사고 및 긴급 상황에 대비한 행동 요령을 반드시 숙지해 주세요.</p>
                 </div>
-                
                 <div class="max-w-3xl mx-auto">
                     <div class="bg-red-50 p-8 md:p-12 rounded-[2.5rem] border border-red-100 shadow-xl relative overflow-hidden text-center group">
-                        <div class="absolute -right-10 -top-10 text-red-100/50 text-[150px] z-0 pointer-events-none transition-transform duration-500 group-hover:scale-110">
-                            <i class="fa-solid fa-shield-halved"></i>
-                        </div>
+                        <div class="absolute -right-10 -top-10 text-red-100/50 text-[150px] z-0 pointer-events-none"><i class="fa-solid fa-shield-halved"></i></div>
                         <div class="relative z-10">
-                            <div class="inline-block bg-red-600 text-white text-xs font-bold px-4 py-1.5 rounded-full mb-6 shadow-sm tracking-widest">
-                                투어메이커 독자 기술
-                            </div>
+                            <div class="inline-block bg-red-600 text-white text-xs font-bold px-4 py-1.5 rounded-full mb-6 tracking-widest">투어메이커 독자 기술</div>
                             <h3 class="text-2xl md:text-3xl font-black mb-4 text-slate-900">투어메이커 안전 매뉴얼 (T-safe24)</h3>
-                            <p class="text-base md:text-lg text-slate-700 mb-8 leading-relaxed">
-                                사용자 실행형 긴급지원 시스템으로,<br class="hidden md:block"> 현장에서 즉각적으로 활용할 수 있는 안전 매뉴얼입니다.
-                            </p>
-                            
+                            <p class="text-base md:text-lg text-slate-700 mb-8 leading-relaxed">사용자 실행형 긴급지원 시스템으로,<br class="hidden md:block"> 현장에서 즉각적으로 활용할 수 있는 안전 매뉴얼입니다.</p>
                             <div class="inline-block text-left bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-red-50 mb-8 w-full max-w-lg">
                                 <ul class="text-sm md:text-base text-slate-800 space-y-4 font-bold">
                                     <li class="flex items-center"><i class="fa-solid fa-check text-red-600 mr-4 text-lg"></i>위치 기반 긴급 지원 (인근 병원/경찰서 탐색)</li>
@@ -660,11 +502,7 @@
                                     <li class="flex items-center"><i class="fa-solid fa-check text-red-600 mr-4 text-lg"></i>긴급 상황 대응용 위치 공유 시스템</li>
                                 </ul>
                             </div>
-                            
-                            <p class="text-[11px] md:text-xs text-slate-500 mb-8 font-medium">
-                                ※ 본 시스템은 상시 자동 추적(관제)이 아닌, 필요 시 사용자의 실행으로 구동되는 안심 보조 도구입니다.
-                            </p>
-                            
+                            <p class="text-[11px] md:text-xs text-slate-500 mb-8 font-medium">※ 본 시스템은 상시 자동 추적(관제)이 아닌, 필요 시 사용자의 실행으로 구동되는 안심 보조 도구입니다.</p>
                             <a href="https://indadady.github.io/T-safe24/" target="_blank" rel="noopener" class="inline-flex items-center justify-center bg-red-600 hover:bg-red-700 text-white font-black py-4 px-10 rounded-xl transition-all shadow-lg text-lg transform hover:-translate-y-1">
                                 매뉴얼 확인하기 <i class="fa-solid fa-arrow-up-right-from-square ml-3"></i>
                             </a>
@@ -675,7 +513,7 @@
         </section>
 
         <!-- Contact -->
-        <section id="contact" class="py-20 bg-slate-100 border-t">
+        <section id="contact" class="py-20 bg-white border-t">
             <div class="container mx-auto px-4 text-center">
                 <h2 class="text-2xl font-bold mb-8">투어메이커 담당자</h2>
                 <div class="max-w-md mx-auto bg-white p-8 rounded-2xl shadow-lg border-2 border-sky-400">
@@ -691,7 +529,6 @@
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="bg-slate-50 text-slate-600 py-12 border-t border-slate-200">
         <div class="container mx-auto px-4 text-center">
             <div class="mb-6 flex justify-center">
@@ -699,134 +536,52 @@
                     <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgHfgIX70O5k6Anuo0UgALIdaG9jSga9auHu3uyz0uEirylGPAJnjN_qQbvEGMUvPqUQf_g9FMNUHRxlDcUBf4vZ3Mpy4TnA9WxbmzWYK11gt2zuy_Irl4wctNFjcjLyPo0GPXV792o_J7L9guRMuDfeC1gy7USwywjYbECZgzcsHybuGRRAXAnO1eNmP8/s320/logo.png" alt="Tourmaker Footer Logo" class="h-10 w-auto opacity-80 hover:opacity-100 transition-opacity bg-white/10 rounded px-2 py-1">
                 </a>
             </div>
-            
             <p class="mb-2 font-medium text-slate-500">통리초등학교 학생들의 꿈을 응원합니다.</p>
             <p class="text-sm text-slate-400 mb-6">&copy; 2026 Tourmaker. All Rights Reserved.</p>
-            
-            <!-- Link Box -->
-            <a href="https://tourmaker.kr" target="_blank" class="inline-block bg-sky-600 hover:bg-sky-700 text-white font-bold py-3 px-8 rounded-lg shadow-md transition-colors duration-300">
-                투어메이커 홈페이지 방문하기
-            </a>
+            <a href="https://tourmaker.kr" target="_blank" class="inline-block bg-sky-600 hover:bg-sky-700 text-white font-bold py-3 px-8 rounded-lg shadow-md transition-colors duration-300">투어메이커 홈페이지 방문하기</a>
         </div>
     </footer>
 
-    <!-- JavaScript Logic -->
     <script>
-        // Data Objects for Schedules (Table Format)
-        const schedules = {
-            jic: {
-                title: "바기오 JIC 어학원 주간 일정 (프리미엄 밸런스형)",
-                headerColor: "text-blue-800",
-                rows: [
-                    { time: "07:00 ~ 07:50", lesson: "Breakfast", weekday: "기상 및 아침식사 (카페테리아)", weekend: "기상 및 아침식사" },
-                    { time: "07:50 ~ 09:25", lesson: "1~2교시", weekday: "1:1 집중 레슨 (Reading/Writing)", weekend: "휴식 또는 교내 마트(K-Mart) 이용" },
-                    { time: "09:30 ~ 11:05", lesson: "3~4교시", weekday: "테마 ESL 그룹 수업 (회화 중심)", weekend: "야외 라운지 휴식 및 자유시간" },
-                    { time: "11:10 ~ 11:55", lesson: "5교시", weekday: "능동형 참여 학습 (골프/요가 등 지원)", weekend: "바기오 시내 문화 체험 투어" },
-                    { time: "11:30 ~ 12:50", lesson: "Lunch", weekday: "점심식사 및 교내 산책", weekend: "시내 투어 중 현지 식사" },
-                    { time: "12:50 ~ 14:25", lesson: "6~7교시", weekday: "1:1 선택형 맞춤 수업 (Speaking)", weekend: "오후 주말 액티비티 (관광지 방문 등)" },
-                    { time: "14:30 ~ 16:05", lesson: "8~9교시", weekday: "그룹 토론 및 프레젠테이션 준비", weekend: "캠퍼스 복귀 및 휴식" },
-                    { time: "16:10 ~ 17:45", lesson: "10~11교시", weekday: "자율 선택 수업 (문법, 리스닝 등)", weekend: "교내 헬스장, 배드민턴 등 체육활동" },
-                    { time: "17:30 ~ 19:00", lesson: "Dinner", weekday: "저녁식사 및 휴식", weekend: "저녁식사 및 휴식" },
-                    { time: "19:00 ~ 20:50", lesson: "Evening Class", weekday: "이브닝 클래스 (선택) 또는 라운지 자율학습", weekend: "미니 씨어터 영화 감상 및 휴식" },
-                    { time: "21:00 ~ 22:00", lesson: "Sleep", weekday: "개인 정비, 영어일기 작성 및 취침", weekend: "개인 정비 및 취침" }
-                ]
-            },
-            baguio: {
-                title: "바기오 CNS 어학원 주간 일정 (학습 집중형)",
-                headerColor: "text-green-800",
-                rows: [
-                    { time: "07:00 ~ 08:00", lesson: "Morning", weekday: "기상, 아침체조, 아침식사, 세면", weekend: "기상 및 아침식사" },
-                    { time: "08:00 ~ 08:45", lesson: "1교시", weekday: "일대일 집중 수업 진행", weekend: "휴식" },
-                    { time: "08:55 ~ 09:40", lesson: "2교시", weekday: "일대일 집중 수업 진행", weekend: "주말 액티비티 출발" },
-                    { time: "09:50 ~ 10:35", lesson: "3교시", weekday: "소그룹 수학/보충 수업 진행(선택)", weekend: "주말 야외 액티비티" },
-                    { time: "10:45 ~ 11:30", lesson: "4교시", weekday: "스페셜 팝송/액티비티 그룹 수업", weekend: "주말 야외 액티비티" },
-                    { time: "11:50 ~ 12:25", lesson: "자율학습", weekday: "도서관 자율학습 (의무)", weekend: "주말 야외 액티비티" },
-                    { time: "12:25 ~ 13:25", lesson: "Lunch", weekday: "점심식사 및 쉬는 시간", weekend: "점심식사" },
-                    { time: "13:25 ~ 14:10", lesson: "5교시", weekday: "일대일 수업 진행", weekend: "캠퍼스 복귀 및 휴식" },
-                    { time: "14:20 ~ 15:05", lesson: "6교시", weekday: "그룹 토론 수업 진행", weekend: "통문장 암기 및 총 테스트 준비" },
-                    { time: "15:25 ~ 16:10", lesson: "7교시", weekday: "일대일 수업 진행", weekend: "영어독서, 수학 보충 / 시내 외출" },
-                    { time: "16:20 ~ 17:05", lesson: "8교시", weekday: "일대일 수업 진행", weekend: "주말 외출 및 쇼핑" },
-                    { time: "17:15 ~ 18:00", lesson: "Break", weekday: "쉬는시간", weekend: "휴식" },
-                    { time: "18:00 ~ 19:00", lesson: "Dinner", weekday: "저녁식사, 쉬는 시간 (부모님과 통화)", weekend: "저녁식사" },
-                    { time: "19:00 ~ 19:50", lesson: "Night 1", weekday: "어휘암기 및 데일리 테스트", weekend: "자율 휴식 및 영화 감상" },
-                    { time: "20:00 ~ 20:30", lesson: "Night 2", weekday: "생활회화 통문장 암기 및 테스트", weekend: "자율 휴식 및 영화 감상" },
-                    { time: "20:30 ~ 21:00", lesson: "Reading", weekday: "영어도서 읽기 의무", weekend: "자율 휴식 및 영화 감상" },
-                    { time: "21:00 ~", lesson: "Sleep", weekday: "점호준비, 위생관리, 취침", weekend: "점호준비, 위생관리, 취침" }
-                ]
-            }
+        const jicSchedule = {
+            title: "바기오 JIC Premium Campus — TEP ESL 일과",
+            rows: [
+                { time: "07:00–07:50", activity: "Breakfast", weekday: "기상 및 아침식사 (Cafeteria)", weekend: "기상 및 아침식사", break: true },
+                { time: "07:20–07:45", activity: "Vocab Test", weekday: "모닝 단어 테스트 (선택)", weekend: "—", break: false },
+                { time: "07:50–08:35", activity: "1st Class", weekday: "1:1 TEP 테마 ESL / General ESL", weekend: "휴식 또는 K-Store 이용", break: false },
+                { time: "08:40–09:25", activity: "2nd Class", weekday: "1:1 TEP 테마 ESL / General ESL", weekend: "교내 라운지·야외 휴식", break: false },
+                { time: "09:30–10:15", activity: "3rd Class", weekday: "1:1 또는 Group Class", weekend: "바기오 시내 문화 체험", break: false },
+                { time: "10:20–11:05", activity: "4th Class", weekday: "Group Class (회화·토론)", weekend: "Burnham Park / Mines View 등", break: false },
+                { time: "11:10–11:55", activity: "5th Class", weekday: "Group Class / Presentation", weekend: "주말 액티비티 진행", break: false },
+                { time: "11:30–12:50", activity: "Lunch", weekday: "점심식사 (Cafeteria)", weekend: "현지 식사", break: true },
+                { time: "12:50–13:35", activity: "6th Class", weekday: "1:1 Speaking / Reading", weekend: "오후 관광·체험", break: false },
+                { time: "13:40–14:25", activity: "7th Class", weekday: "1:1 Writing / Grammar", weekend: "오후 관광·체험", break: false },
+                { time: "14:30–15:15", activity: "8th Class", weekday: "1:1 또는 Group Class", weekend: "캠퍼스 복귀", break: false },
+                { time: "15:20–16:05", activity: "9th Class", weekday: "Group Class", weekend: "헬스장·체육 활동", break: false },
+                { time: "16:10–16:55", activity: "10th Class", weekday: "1:1 또는 Group Class", weekend: "미니 극장·라운지", break: false },
+                { time: "17:00–17:45", activity: "11th Class", weekday: "선택 수업 / 자율학습", weekend: "자유 시간", break: false },
+                { time: "17:30–19:00", activity: "Dinner", weekday: "저녁식사 및 휴식", weekend: "저녁식사 및 휴식", break: true },
+                { time: "19:00–19:50", activity: "Evening 1", weekday: "이브닝 클래스 (Grammar/Cinema/Yoga 등, 선택)", weekend: "영화 감상·휴식", break: false },
+                { time: "20:00–20:50", activity: "Evening 2", weekday: "이브닝 클래스 / 자율학습 (선택)", weekend: "자율 휴식", break: false },
+                { time: "21:00–22:00", activity: "Rest", weekday: "영어일기·개인 정비·취침", weekend: "개인 정비·취침", break: true }
+            ]
         };
 
-        // Switch Schedule Function (Table Version)
-        function switchSchedule(type) {
+        function renderSchedule() {
             const tableBody = document.getElementById('schedule-body');
-            const title = document.getElementById('schedule-title');
-            const btnJic = document.getElementById('btn-jic');
-            const btnBaguio = document.getElementById('btn-baguio');
-            const data = schedules[type];
-
-            // Button Styles
-            if(type === 'jic') {
-                btnJic.className = "option-btn px-6 py-3 rounded-full bg-blue-600 border-2 border-blue-600 text-white font-bold text-lg shadow-lg flex items-center gap-2 active";
-                btnBaguio.className = "option-btn px-6 py-3 rounded-full bg-white border-2 border-slate-300 text-slate-500 font-bold text-lg hover:border-green-500 hover:text-green-600 flex items-center gap-2";
-            } else {
-                btnBaguio.className = "option-btn px-6 py-3 rounded-full bg-green-600 border-2 border-green-600 text-white font-bold text-lg shadow-lg flex items-center gap-2 active";
-                btnJic.className = "option-btn px-6 py-3 rounded-full bg-white border-2 border-slate-300 text-slate-500 font-bold text-lg hover:border-blue-500 hover:text-blue-600 flex items-center gap-2";
-            }
-
-            // Update Title
-            title.innerText = data.title;
-            title.className = `text-xl md:text-2xl font-bold ${data.headerColor}`;
-
-            // Update Table Content
             let html = '';
-            
-            data.rows.forEach(row => {
-                // Determine row background for differentiation
-                const isBreak = row.lesson.includes('Lunch') || row.lesson.includes('Dinner') || row.lesson.includes('Sleep') || row.lesson.includes('Morning') || row.lesson.includes('Break');
-                const rowClass = isBreak ? 'bg-orange-50 font-medium' : 'border-b hover:bg-slate-50';
-                
-                html += `
-                <tr class="${rowClass}">
+            jicSchedule.rows.forEach(row => {
+                const rowClass = row.break ? 'bg-orange-50 font-medium' : 'border-b hover:bg-slate-50';
+                html += `<tr class="${rowClass}">
                     <td class="p-4 border-r border-slate-100 font-mono text-xs md:text-sm text-slate-500">${row.time}</td>
-                    <td class="p-4 border-r border-slate-100 font-bold text-slate-700">${row.lesson}</td>
+                    <td class="p-4 border-r border-slate-100 font-bold text-slate-700">${row.activity}</td>
                     <td class="p-4 border-r border-slate-100">${row.weekday}</td>
                     <td class="p-4 bg-slate-50/50 text-slate-600">${row.weekend}</td>
-                </tr>
-                `;
+                </tr>`;
             });
-
             tableBody.innerHTML = html;
         }
 
-        // Academy Tab Switcher
-        function showAcademy(type) {
-            const contentCNS = document.getElementById('content-cns');
-            const contentJIC = document.getElementById('content-jic');
-            const tabCNS = document.getElementById('tab-cns');
-            const tabJIC = document.getElementById('tab-jic');
-
-            if(type === 'cns') {
-                contentCNS.classList.remove('hidden');
-                contentJIC.classList.add('hidden');
-                
-                tabCNS.classList.add('active', 'text-green-700', 'border-green-600', 'border-b-2', 'font-bold', 'bg-white');
-                tabCNS.classList.remove('text-slate-500', 'hover:bg-white/50');
-                
-                tabJIC.classList.remove('active', 'text-blue-700', 'border-blue-600', 'border-b-2', 'font-bold', 'bg-white');
-                tabJIC.classList.add('text-slate-500', 'hover:bg-white/50');
-            } else {
-                contentCNS.classList.add('hidden');
-                contentJIC.classList.remove('hidden');
-                
-                tabJIC.classList.add('active', 'text-blue-700', 'border-blue-600', 'border-b-2', 'font-bold', 'bg-white');
-                tabJIC.classList.remove('text-slate-500', 'hover:bg-white/50');
-                
-                tabCNS.classList.remove('active', 'text-green-700', 'border-green-600', 'border-b-2', 'font-bold', 'bg-white');
-                tabCNS.classList.add('text-slate-500', 'hover:bg-white/50');
-            }
-        }
-
-        // Video Play Logic
         function playVideo(element, videoId) {
             const iframe = document.createElement('iframe');
             iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
@@ -834,54 +589,50 @@
             iframe.className = "w-full h-full";
             iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
             iframe.allowFullscreen = true;
-            
-            // Clear current content and add iframe
             element.innerHTML = '';
             element.appendChild(iframe);
-            element.classList.remove('cursor-pointer', 'group'); // Remove hover effects
+            element.classList.remove('cursor-pointer', 'group');
         }
 
         document.addEventListener('DOMContentLoaded', function () {
-            
-            // Initial Load: JIC Schedule
-            switchSchedule('jic');
+            renderSchedule();
 
-            // D-Day Counter (Target: 2026-11-14)
             const dDayBadge = document.getElementById('d-day-badge');
             const today = new Date();
-            today.setHours(0,0,0,0);
-            const startDate = new Date('2026-11-14T00:00:00'); 
-            startDate.setHours(0,0,0,0);
-            
+            today.setHours(0, 0, 0, 0);
+            const startDate = new Date('2026-11-14T00:00:00');
+            startDate.setHours(0, 0, 0, 0);
+            const endDate = new Date('2026-11-28T00:00:00');
+            endDate.setHours(0, 0, 0, 0);
             const diff = Math.ceil((startDate - today) / (1000 * 60 * 60 * 24));
 
-            if (diff > 0) {
-                dDayBadge.innerText = `D-${diff}`;
+            if (today > endDate) {
+                dDayBadge.innerText = '🏁 여정 종료';
+            } else if (today >= startDate && today <= endDate) {
+                const dayNum = Math.ceil((today - startDate) / (1000 * 60 * 60 * 24)) + 1;
+                dDayBadge.innerText = `📍 ${dayNum}일차 진행중`;
             } else if (diff === 0) {
-                dDayBadge.innerText = "D-Day! 출발";
-                dDayBadge.classList.remove('bg-sky-600');
-                dDayBadge.classList.add('bg-red-600', 'animate-bounce');
+                dDayBadge.innerText = 'D-Day! 출발';
+                dDayBadge.classList.replace('bg-sky-600', 'bg-red-600');
+                dDayBadge.classList.add('animate-bounce');
+            } else if (diff > 0) {
+                dDayBadge.innerText = `D-${diff}`;
             } else {
-                dDayBadge.innerText = "진행 중";
+                dDayBadge.innerText = '진행 중';
             }
 
-            // My Yellow Note (Auto-save)
             const memoArea = document.getElementById('travel-memo');
             const saveStatus = document.getElementById('save-status');
-            
-            const savedMemo = localStorage.getItem('tongri_camp_memo_v3'); // v3 for baguio update
-            if (savedMemo) {
-                memoArea.value = savedMemo;
-            }
+            const savedMemo = localStorage.getItem('tongri_jic_memo_v4');
+            if (savedMemo) memoArea.value = savedMemo;
 
-            memoArea.addEventListener('input', function() {
-                localStorage.setItem('tongri_camp_memo_v3', this.value);
-                saveStatus.innerText = "저장됨 " + new Date().toLocaleTimeString();
+            memoArea.addEventListener('input', function () {
+                localStorage.setItem('tongri_jic_memo_v4', this.value);
+                saveStatus.innerText = '저장됨 ' + new Date().toLocaleTimeString();
                 saveStatus.classList.add('text-green-600');
                 setTimeout(() => saveStatus.classList.remove('text-green-600'), 1000);
             });
 
-            // Checklist Logic
             const checklistContainer = document.getElementById('checklist-container');
             const checklistItems = [
                 { id: 'passport', text: '여권 (유효기간 6개월 이상)' },
@@ -900,25 +651,21 @@
             checklistItems.forEach(item => {
                 const div = document.createElement('div');
                 div.className = 'flex items-center p-3 bg-white rounded-lg border border-slate-200 hover:bg-slate-100 transition-colors shadow-sm';
-                div.innerHTML = `
-                    <input type="checkbox" id="${item.id}" class="h-5 w-5 text-sky-600 rounded border-gray-300 focus:ring-sky-500 cursor-pointer">
-                    <label for="${item.id}" class="ml-3 text-slate-700 font-medium cursor-pointer flex-grow select-none">${item.text}</label>
-                `;
+                div.innerHTML = `<input type="checkbox" id="${item.id}" class="h-5 w-5 text-sky-600 rounded border-gray-300 focus:ring-sky-500 cursor-pointer"><label for="${item.id}" class="ml-3 text-slate-700 font-medium cursor-pointer flex-grow select-none">${item.text}</label>`;
                 checklistContainer.appendChild(div);
-                
                 const checkbox = div.querySelector('input');
-                checkbox.checked = localStorage.getItem('tongri_check_v3_' + item.id) === 'true';
-                checkbox.addEventListener('change', (e) => localStorage.setItem('tongri_check_v3_' + item.id, e.target.checked));
+                checkbox.checked = localStorage.getItem('tongri_jic_check_v4_' + item.id) === 'true';
+                checkbox.addEventListener('change', e => localStorage.setItem('tongri_jic_check_v4_' + item.id, e.target.checked));
             });
 
-            window.resetChecklist = function() {
-                if(confirm('체크리스트를 초기화 하시겠습니까?')) {
+            window.resetChecklist = function () {
+                if (confirm('체크리스트를 초기화 하시겠습니까?')) {
                     checklistItems.forEach(item => {
-                        localStorage.removeItem('tongri_check_v3_' + item.id);
+                        localStorage.removeItem('tongri_jic_check_v4_' + item.id);
                         document.getElementById(item.id).checked = false;
                     });
                 }
-            }
+            };
         });
     </script>
 </body>

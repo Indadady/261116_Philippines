@@ -8,7 +8,7 @@
 
 ## 배포 URL
 
-https://indadady.github.io/261116_Philippines/
+https://indadady.github.io/261114_Philippines/
 
 ## 담당자
 

@@ -1,4 +1,4 @@
-# Image Credits — 261116_Philippines (통리초 JIC)
+# Image Credits — 261114_Philippines (통리초 JIC)
 
 | File | Source | License / Note |
 |------|--------|----------------|
